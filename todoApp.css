@@ -1,8 +1,10 @@
 ul li{
   list-style: none;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 20px;
   padding: 15px 15px 15px 0;
   border-bottom: 1px solid #e6ebed;
+  color: #676767;
 }
 
 h1{
@@ -10,7 +12,9 @@ h1{
 }
 
 legend {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 0 20px 0;
 }
 
 .container{
@@ -30,6 +34,6 @@ legend {
   font-weight: 700;
 }
 
-.todo {
- 
+.todo .todo-done {
+  margin-bottom: 6px;
 }
