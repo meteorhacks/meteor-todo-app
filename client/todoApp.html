@@ -7,11 +7,11 @@
     <div class="span6 offset3 todo"> 
       <h1> To Do App</h1>
         <ul class="todo-list">
+          <li>
+            <input type="text" id="input-todo" placeholder="What needs to be done?…">
+            <input type="button" value="Add" class="btn" id="add-todo" />
+          </li>
           {{#if todosList.count}}
-        <li>
-        <input type="text" id="input-todo" placeholder="What needs to be done?…">
-        <input type="button" value="Add" class="btn" id="add-todo" />
-        </li>
             {{#each todosList}}
               <li> 
                 <input type="checkbox" class="todo-done" {{#if isChecked}}checked="checked"{{/if}}/>  
