@@ -1,0 +1,15 @@
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+  <h1>Todo App!</h1>
+  <div> 
+    <input type="text" id="input-todo"><input type="button" value="Add" class="btn" id="add-todo" />
+  </div>
+  <ul>
+    {{#each todosList}}
+      <li> <input type="button" value="Delete" class="btn" id="delete-todo" /> {{title}} </li>
+    {{/each}}
+  </ul>
+</template>
