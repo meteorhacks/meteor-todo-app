@@ -1,1 +1,8 @@
 /* CSS declarations go here */
+ul li{
+  list-style: none;
+  padding: 10px 3px;
+}
+#input-todo, #add-todo{
+  margin: 10px;
+}

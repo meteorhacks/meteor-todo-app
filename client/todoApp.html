@@ -3,13 +3,24 @@
 </body>
 
 <template name="main">
-  <h1>Todo App!</h1>
-  <div> 
-    <input type="text" id="input-todo"><input type="button" value="Add" class="btn" id="add-todo" />
+  <div id="content" class="container" >
+    <div class="span6 offset3"> 
+
+      <fieldset>
+        <legend>Todo App!</legend>
+        <label>Todo</label>
+        <input type="text" id="input-todo" placeholder="What needs to be done?…">
+        <input type="button" value="Add" class="btn" id="add-todo" />
+        <ul>
+          {{#each todosList}}
+            <li> 
+              <input type="checkbox" class="todo-done" {{#if isChecked}}checked="checked"{{/if}}/>  
+              {{title}} 
+              <input type="button" value="Delete" class="btn" id="delete-todo" />
+            </li>
+          {{/each}}
+        </ul>
+      </fieldset>
+    </div>
   </div>
-  <ul>
-    {{#each todosList}}
-      <li> <input type="button" value="Delete" class="btn" id="delete-todo" /> {{title}} </li>
-    {{/each}}
-  </ul>
 </template>

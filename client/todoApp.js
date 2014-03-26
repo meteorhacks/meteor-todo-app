@@ -8,9 +8,17 @@ Template.main.events({
   },
   'click #delete-todo': function () {
     Todos.remove(this._id);
+  },
+  'change .todo-done ': function(e){
+    var isDone = $(e.target).is(':checked');
+    Todos.update({_id: this._id}, {$set: {isDone: isDone}})
   }
 });
 
 Template.main.todosList = function(){
   return Todos.find();
+}
+
+Template.main.isChecked = function () {
+  return this.isDone;
 }
