@@ -1,11 +1,10 @@
-/* CSS declarations go here */
 ul li{
   list-style: none;
   padding: 10px 3px;
   font-size: 24px;
-padding: 7px 15px 7px 50px;
-line-height: 21px;
-border-bottom: 1px solid #e6ebed;
+  padding: 7px 15px 7px 50px;
+  line-height: 21px;
+  border-bottom: 1px solid #e6ebed;
 }
 h1{
   margin-left: 30px;
@@ -32,8 +31,6 @@ h1{
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-
-
 .todo:before {
   left: 2px;
   right: 2px;
