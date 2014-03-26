@@ -6,7 +6,7 @@ Template.main.events({
       $('#input-todo').val('');
     } 
   },
-  'click #delete-todo': function () {
+  'click .delete-todo': function () {
     Todos.remove(this._id);
   },
   'change .todo-done ': function(e){

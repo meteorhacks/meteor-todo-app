@@ -4,23 +4,26 @@
 
 <template name="main">
   <div id="content" class="container" >
-    <div class="span6 offset3"> 
-
-      <fieldset>
-        <legend>Todo App!</legend>
-        <label>Todo</label>
+    <div class="span6 offset3 todo"> 
+      <h1> To Do App</h1>
+        <ul class="todo-list">
+          {{#if todosList.count}}
+        <li>
         <input type="text" id="input-todo" placeholder="What needs to be done?…">
         <input type="button" value="Add" class="btn" id="add-todo" />
-        <ul>
-          {{#each todosList}}
-            <li> 
-              <input type="checkbox" class="todo-done" {{#if isChecked}}checked="checked"{{/if}}/>  
-              {{title}} 
-              <input type="button" value="Delete" class="btn" id="delete-todo" />
-            </li>
-          {{/each}}
+        </li>
+            {{#each todosList}}
+              <li> 
+                <input type="checkbox" class="todo-done" {{#if isChecked}}checked="checked"{{/if}}/>  
+                {{title}} 
+                <input type="button" value="Delete" class="btn delete-todo" />
+              </li>
+            {{/each}}
+          {{else}}
+           No todos
+          {{/if}}
+
         </ul>
-      </fieldset>
     </div>
   </div>
 </template>
