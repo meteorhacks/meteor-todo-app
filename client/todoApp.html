@@ -14,9 +14,9 @@
         <ul>
           {{#each todosList}}
             <li> 
-              <input type="checkbox" class="todo-done" {{#if isChecked}}checked="checked"{{/if}}/>  
+              <input type="checkbox" class="todo-done" {{#if isDone}}checked{{/if}}/>  
               {{title}} 
-              <input type="button" value="Delete" class="btn" id="delete-todo" />
+              <input type="button" value="Delete" class="btn delete-todo" />
             </li>
           {{/each}}
         </ul>
