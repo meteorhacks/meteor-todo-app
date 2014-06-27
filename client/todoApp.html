@@ -4,7 +4,7 @@
 
 <template name="main">
   <div id="content" class="container" >
-    <div class="span6 offset3"> 
+    <div class="span6 offset3">
 
       <fieldset>
         <legend>Simple Todo App</legend>
@@ -12,9 +12,9 @@
         <input type="button" value="Add" class="btn btn-primary" id="add-todo" />
         <ul class="todo-list">
           {{#each todosList}}
-            <li class="todo"> 
-              <input type="checkbox" class="todo-done" {{#if isDone}}checked{{/if}}/>  
-              {{title}} 
+            <li class="todo">
+              <input type="checkbox" class="todo-done" {{checkedState}}/>  
+              {{title}}
               <input type="button" value="Delete" class="btn btn-mini delete-todo" />
             </li>
           {{/each}}
