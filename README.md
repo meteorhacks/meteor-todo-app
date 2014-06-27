@@ -1,4 +1,6 @@
-demo-todo-app
+meteor-todo-app
 =============
 
-demo meteor app for colombo javascript meetup
+Ultra Simple Todo App with Meteor.
+
+![Meteor Todo App Screenshot](https://i.cloudup.com/DCcBG58qYv.png)
