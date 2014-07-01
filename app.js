@@ -1,29 +1,13 @@
-Todos = new Meteor.Collection('todos');
-Todos.allow({
-  remove: function() { return true; },
-  update: function() { return true; }
-});
-
-Meteor.methods({
-  addTodo: function(title) {
-    return Todos.insert({'title': title});
-  }
-});
-
-if(Meteor.isServer) {
-  Meteor.publish('todos', function() {
-    return Todos.find();
-  });
-}
-
 if(Meteor.isClient) {
-  Meteor.subscribe('todos');
+  Todos = new Meteor.Collection(null);
 
   Template.main.events({
     'click #add-todo': function () {
       var todoText = $('#input-todo').val();
       if(todoText.trim() != ""){
-        Meteor.call('addTodo', todoText);
+        Todos.insert({
+          title: todoText
+        });
         $('#input-todo').val('');
       }
     },
