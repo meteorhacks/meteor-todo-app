@@ -1,5 +1,5 @@
 if(Meteor.isClient) {
-  Todos = new Meteor.Collection(null);
+  Todos = new Mongo.Collection(null);
 
   Template.main.events({
     'click #add-todo': function () {
